@@ -2,18 +2,26 @@
 import { Menubar } from 'primevue'
 import { ref } from 'vue'
 
-const optionMenu = ref([{ label: 'Option 1' }, { label: 'Option 2' }, { label: 'Option 3' }])
+const cvMenu = ref([
+  { label: 'Option 1', link: 'option1' },
+  { label: 'Option 2', link: 'option2' }, 
+  { label: 'Option 3', link: 'option3' }
+])
 
-const otherMenu = ref([{ label: 'Item 1' }, { label: 'Item 2' }, { label: 'Item 3' }])
+const arMenu = ref([
+  { label: 'Item 1', link: 'item1' }, 
+  { label: 'Item 2', link: 'item2' }, 
+  { label: 'Item 3', link: 'item3' }
+])
 
 const menuItems = ref([
   {
-    label: 'Options',
-    items: optionMenu,
+    label: 'Computer Vision',
+    items: cvMenu,
   },
   {
-    label: 'Other',
-    items: otherMenu,
+    label: 'Augmented Reality',
+    items: arMenu,
   },
 ])
 
@@ -26,7 +34,11 @@ const toggle = (event) => {
   <div class="card flex justify-center">
     <Menubar :model="menuItems">
       <template #item="{ item, props, hasSubmenu, root }">
-        <span>{{ item.label }}</span>
+        <router-link :to="item.link" custom>
+          <a v-ripple :href="item.link" v-bind="props.action" @click="navigate">
+            <span>{{ item.label }}</span>
+          </a>
+       </router-link>
       </template>
     </Menubar>
   </div>
