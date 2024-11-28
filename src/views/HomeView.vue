@@ -1,5 +1,5 @@
 <script>
-import { Card, Divider } from 'primevue'
+import { Card, Divider, Image } from 'primevue'
 </script>
 
 <template>
@@ -9,9 +9,8 @@ import { Card, Divider } from 'primevue'
       <p> lorem ipsum lmao</p>
     </div>
     <Card class="content">
-      <template #title> Virtual Reality</template>
       <template #content>
-        <strong>Insert placeholder video here</strong>
+        <Image src="/src/assets/picture.png" ></Image>
       </template>
     </Card>
   </div>

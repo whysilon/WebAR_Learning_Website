@@ -18,3 +18,8 @@
   font-size: 1rem;
 }
 </style>
+<script>
+export default {
+  name: 'Footer'
+}
+</script>
