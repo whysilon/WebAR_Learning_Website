@@ -16,6 +16,10 @@ const arMenu = ref([
 
 const menuItems = ref([
   {
+    label: 'Home',
+    route: '/',
+  },
+  {
     label: 'Computer Vision',
     items: cvMenu.value,
   },

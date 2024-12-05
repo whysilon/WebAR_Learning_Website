@@ -1,7 +1,7 @@
 <template>
     <Stepper value = '1'>
         <StepItem v-for="(title, index) in moduleContent.title" :key="index" :value="index+1" >
-            <Step> Module {{ index+1 }}</Step>
+            <Step> {{moduleContent.title[index]}}</Step>
             <StepPanel v-slot="{ activateCallback }"> 
               <p>{{ moduleContent.content[index] }}</p>  
               <div class="flex py-6 gap-2">
