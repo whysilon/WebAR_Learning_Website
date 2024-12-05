@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="layout-container">
-    <Navbar />
+    <Navbar class="navbar" />
     <main class="main-content">
       <!-- This is where child components will be rendered -->
       <RouterView />
@@ -26,9 +26,15 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+}
+
+.navbar {
+  z-index: 1000; /* Ensure it is above other content */
 }
 
 .main-content {
   flex: 1; /* Pushes the footer to the bottom if content is less */
+  margin-top: 10px; /* Adjust based on the height of the Navbar */
 }
 </style>
