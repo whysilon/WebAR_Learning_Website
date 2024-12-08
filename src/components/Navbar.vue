@@ -3,15 +3,15 @@ import { Menubar } from 'primevue'
 import { ref } from 'vue'
 
 const cvMenu = ref([
-  { label: 'Option 1', route: '/option1' },
+  { label: 'What is Augmented Reality', route: '/docs/AR' },
   { label: 'Option 2', route: '/option2' }, 
   { label: 'Option 3', route: '/option3' }
 ])
 
 const arMenu = ref([
-  { label: 'Item 1', route: '/item1' }, 
-  { label: 'Item 2', route: '/item2' }, 
-  { label: 'Item 3', route: '/item3' }
+  { label: 'What is Augmented Reality', route: '/docs/what-is-AR' }, 
+  { label: 'Application of Augemented Reality', route: '/docs/applications-of-AR' }, 
+  { label: 'History of AR', route: 'history-of-AR' }
 ])
 
 const menuItems = ref([
@@ -20,12 +20,12 @@ const menuItems = ref([
     route: '/',
   },
   {
-    label: 'Computer Vision',
-    items: cvMenu.value,
-  },
-  {
     label: 'Augmented Reality',
     items: arMenu.value,
+  },
+  {
+    label: 'Computer Vision',
+    items: cvMenu.value,
   },
 ])
 

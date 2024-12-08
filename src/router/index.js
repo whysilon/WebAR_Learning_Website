@@ -25,7 +25,21 @@ const router = createRouter({
           component: ModuleLayout,
           children: [
             { 
-              path: 'AR',
+              path: 'what-is-AR',
+              components: {
+                default: ARMenu,
+                module: ModuleContent
+              }
+            },
+            {
+              path: 'applications-of-AR',
+              components: {
+                default: ARMenu,
+                module: ModuleContent
+              }
+            },
+            {
+              path: 'history-of-AR',
               components: {
                 default: ARMenu,
                 module: ModuleContent
