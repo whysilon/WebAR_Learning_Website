@@ -4,6 +4,7 @@ import BaseLayout from '@/layouts/BaseLayout.vue'
 import OptionView from '@/views/ComputerVision/OptionView.vue'
 import ARMenu from '@/views/AugmentedReality/Module1/ARMenu.vue'
 import ModuleLayout from '@/layouts/ModuleLayout.vue'
+import ModuleContent from '@/views/AugmentedReality/Module1/ModuleContent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,7 +28,7 @@ const router = createRouter({
               path: 'AR',
               components: {
                 default: ARMenu,
-                helper: OptionView
+                module: ModuleContent
               }
             }
           ]
