@@ -9,9 +9,8 @@ const cvMenu = ref([
 ])
 
 const arMenu = ref([
-  { label: 'What is Augmented Reality', route: '/docs/what-is-AR' }, 
-  { label: 'Application of Augemented Reality', route: '/docs/applications-of-AR' }, 
-  { label: 'History of AR', route: 'history-of-AR' }
+  { label: 'Introduction to AR', route: '/docs/intro-to-AR' }, 
+  { label: 'Types of AR', route: '/docs/types-of-AR' }, 
 ])
 
 const menuItems = ref([

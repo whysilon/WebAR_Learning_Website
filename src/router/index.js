@@ -5,6 +5,8 @@ import OptionView from '@/views/ComputerVision/OptionView.vue'
 import IntroMenu from '@/views/AugmentedReality/Introduction/IntroMenu.vue'
 import ModuleLayout from '@/layouts/ModuleLayout.vue'
 import IntroContent from '@/views/AugmentedReality/Introduction/IntroContent.vue'
+import TypesMenu from '@/views/AugmentedReality/Types/TypesMenu.vue'
+import TypesContent from '@/views/AugmentedReality/Types/TypesContent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,26 +27,19 @@ const router = createRouter({
           component: ModuleLayout,
           children: [
             { 
-              path: 'what-is-AR',
+              path: 'intro-to-AR',
               components: {
-                default: ARMenu,
-                module: ModuleContent
+                default: IntroMenu,
+                module: IntroContent
               }
             },
             {
-              path: 'applications-of-AR',
+              path: 'types-of-AR',
               components: {
-                default: ARMenu,
-                module: ModuleContent
+                default: TypesMenu,
+                module: TypesContent
               }
             },
-            {
-              path: 'history-of-AR',
-              components: {
-                default: ARMenu,
-                module: ModuleContent
-              }
-            }
           ]
         },
         {
