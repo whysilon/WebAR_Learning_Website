@@ -1,5 +1,5 @@
-import ObjectTrackingMenu from '@/views/ComputerVision/Object Tracking/ObjectTrackingMenu.vue';
-import ObjectTrackingContent from '@/views/ComputerVision/Object Tracking/ObjectTrackingContent.vue';
+import ObjectTrackingMenu from '@/views/ComputerVision/Object Tracking/ObjectTrackingMenu.vue'
+import ObjectTrackingContent from '@/views/ComputerVision/Object Tracking/ObjectTrackingContent.vue'
 
 export default [
   {
@@ -15,4 +15,4 @@ export default [
       },
     ],
   },
-];
+]

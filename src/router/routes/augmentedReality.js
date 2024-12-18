@@ -1,7 +1,7 @@
-import IntroMenu from '@/views/AugmentedReality/Introduction/IntroMenu.vue';
-import IntroContent from '@/views/AugmentedReality/Introduction/IntroContent.vue';
-import TypesMenu from '@/views/AugmentedReality/Types/TypesMenu.vue';
-import TypesContent from '@/views/AugmentedReality/Types/TypesContent.vue';
+import IntroMenu from '@/views/AugmentedReality/Introduction/IntroMenu.vue'
+import IntroContent from '@/views/AugmentedReality/Introduction/IntroContent.vue'
+import TypesMenu from '@/views/AugmentedReality/Types/TypesMenu.vue'
+import TypesContent from '@/views/AugmentedReality/Types/TypesContent.vue'
 
 export default [
   {
@@ -24,4 +24,4 @@ export default [
       },
     ],
   },
-];
+]

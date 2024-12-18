@@ -1,8 +1,8 @@
-import BaseLayout from '@/layouts/BaseLayout.vue';
-import ModuleLayout from '@/layouts/ModuleLayout.vue';
-import HomeView from '@/views/HomeView.vue';
-import computerVision from './computerVision';
-import augmentedReality from './augmentedReality';
+import BaseLayout from '@/layouts/BaseLayout.vue'
+import ModuleLayout from '@/layouts/ModuleLayout.vue'
+import HomeView from '@/views/HomeView.vue'
+import computerVision from './computerVision'
+import augmentedReality from './augmentedReality'
 
 export default [
   {
@@ -19,10 +19,7 @@ export default [
         path: 'docs',
         name: 'Document',
         component: ModuleLayout,
-        children: [
-          ...augmentedReality,
-          ...computerVision,
-        ],
+        children: [...augmentedReality, ...computerVision],
       },
     ],
   },
