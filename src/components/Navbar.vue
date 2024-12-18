@@ -3,14 +3,14 @@ import { Menubar } from 'primevue'
 import { ref } from 'vue'
 
 const cvMenu = ref([
-  { label: 'What is Augmented Reality', route: '/docs/AR' },
-  { label: 'Option 2', route: '/option2' },
-  { label: 'Option 3', route: '/option3' },
+  { label: 'Introduction to Computer Vision', route: '/docs/CV/intro-to-computer-vision' },
+  { label: 'Object Tracking', route: '/docs/CV/object-tracking' },
+  { label: 'Types of Object Tracking', route: '/docs/CV/types-of-object-tracking' },
 ])
 
 const arMenu = ref([
-  { label: 'Introduction to AR', route: '/docs/intro-to-AR' },
-  { label: 'Types of AR', route: '/docs/types-of-AR' },
+  { label: 'Introduction to AR', route: '/docs/AR/intro-to-AR' },
+  { label: 'Types of AR', route: '/docs/AR/types-of-AR' },
 ])
 
 const menuItems = ref([
