@@ -1,17 +1,13 @@
 <template>
   <div class="module-container">
-    <ScrollPanel>
-      <router-view />
-    </ScrollPanel>
+    <div>
+      <router-view class="scroll-panel" />
+    </div>
     <div class="module-content">
       <router-view name="module" />
     </div>
   </div>
 </template>
-
-<script setup>
-import { ScrollPanel } from 'primevue'
-</script>
 
 <style scoped>
 .module-menu {
@@ -24,5 +20,10 @@ import { ScrollPanel } from 'primevue'
 .module-content {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.scroll-panel {
+  position: sticky;
+  top: 1rem;
+  height: 100vh;
 }
 </style>
