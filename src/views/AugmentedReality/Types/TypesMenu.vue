@@ -18,8 +18,20 @@ import { ref } from 'vue'
 
 const items = ref([
   {
-    label: 'Types of AR',
-    route: '#Types of AR',
+    label: 'Introduction',
+    route: '#Introduction',
   },
+  {
+    label: 'Head-Worn Display',
+    route: '#Head-Worn-Display',
+  },
+  {
+    label: 'See-Through Display',
+    route: '#See-Through-Display',
+  },
+  {
+    label: 'Projection Display',
+    route: '#Projection-Display',
+  }
 ])
 </script>

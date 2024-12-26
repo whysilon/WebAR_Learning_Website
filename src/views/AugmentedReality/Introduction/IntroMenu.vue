@@ -29,5 +29,9 @@ const items = ref([
     label: 'History of AR',
     route: '#History-of-AR',
   },
+  {
+    label: 'References',
+    route: '#References',
+  }
 ])
 </script>
