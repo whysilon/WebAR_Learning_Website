@@ -32,6 +32,6 @@ const items = ref([
   {
     label: 'Projection Display',
     route: '#Projection-Display',
-  }
+  },
 ])
 </script>

@@ -32,6 +32,6 @@ const items = ref([
   {
     label: 'References',
     route: '#References',
-  }
+  },
 ])
 </script>
