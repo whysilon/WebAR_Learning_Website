@@ -5,7 +5,6 @@ import { ref } from 'vue'
 const cvMenu = ref([
   { label: 'Introduction to Computer Vision', route: '/docs/CV/intro-to-computer-vision' },
   { label: 'Object Tracking', route: '/docs/CV/object-tracking' },
-  { label: 'Types of Object Tracking', route: '/docs/CV/types-of-object-tracking' },
 ])
 
 const arMenu = ref([
