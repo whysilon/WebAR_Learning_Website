@@ -13,8 +13,8 @@ export default [
         components: {
           default: IntroToComputerVisionMenu,
           module: IntroToComputerVisionContent,
+        },
       },
-    },
       {
         path: 'object-tracking',
         components: {
