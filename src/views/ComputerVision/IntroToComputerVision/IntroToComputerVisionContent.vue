@@ -33,7 +33,17 @@
     image as: (1, 0, 1, 0), (0, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 1).
   </p>
   <h1 id="Difficulties-in-AR">Difficulties in Augmented Reality</h1>
-  <p></p>
+  <p>
+    Augmented Reality requires a real-time interaction with the environment. This means that the AR
+    requires video processing rather than image processing. In image processing, it is simpler as in
+    our previous example, we just need to perform our image processing on this one image. However, a
+    video can be seen as a series of frames of images, which means we need to perform our image
+    processing on each frame. This is a difficult task as we are not only limited by the amount of
+    time we have to process but we would need to understand the environment within each frame and
+    how it changes over time. Hence, the question is, how do we track where the virtual objects are 
+    displayed in the display screen and how do we make sure that these virtual objects are displayed with
+    the correct orientation? This is why computer vision concepts such as object tracking and localisation are important.
+  </p>
   <h2 id="References">References</h2>
   <ol style="list-style-type: none">
     <li>[1] Lorem</li>

@@ -21,5 +21,17 @@ const items = ref([
     label: 'Introduction',
     route: '#Introduction',
   },
+  {
+    label: 'How does a computer see?',
+    route: '#How-Computer-Vision',
+  },
+  {
+    label: 'Difficulties in AR',
+    route: '#Difficulties-in-AR',
+  },
+  {
+    label: 'References',
+    route: '#References',
+  },
 ])
 </script>
