@@ -40,9 +40,10 @@
     video can be seen as a series of frames of images, which means we need to perform our image
     processing on each frame. This is a difficult task as we are not only limited by the amount of
     time we have to process but we would need to understand the environment within each frame and
-    how it changes over time. Hence, the question is, how do we track where the virtual objects are 
-    displayed in the display screen and how do we make sure that these virtual objects are displayed with
-    the correct orientation? This is why computer vision concepts such as object tracking and localisation are important.
+    how it changes over time. Hence, the question is, how do we track where the virtual objects are
+    displayed in the display screen and how do we make sure that these virtual objects are displayed
+    with the correct orientation? This is why computer vision concepts such as object tracking and
+    localisation are important.
   </p>
   <h2 id="References">References</h2>
   <ol style="list-style-type: none">

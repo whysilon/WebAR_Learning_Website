@@ -18,8 +18,20 @@ import { ref } from 'vue'
 
 const items = ref([
   {
-    label: 'Object Tracking',
-    route: '#Object-Tracking',
+    label: 'Introduction',
+    route: '#Introduction',
+  },
+  {
+    label: 'Important Terms',
+    route: '#Important-Terms',
+  },
+  {
+    label: 'Object Recognition',
+    route: '#Object-Recognition',
+  },
+  {
+    label: 'Steps of Object Tracking',
+    route: '#Steps-of-Object-Tracking',
   },
 ])
 </script>

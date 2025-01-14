@@ -1,12 +1,18 @@
+<script setup>
+import { Column, DataTable, Image } from 'primevue'
+</script>
+
 <template>
   <div>
     <h1 id="Introduction">Introduction</h1>
     <p>
-      According  to [], tracking refers to real-time determination of the physical attributes of the real environment.
-      For AR, tracking is important as we need to constantly monitor the points of reference are the same in the real world
-      and the virtual world. For example, in the use of fiducial markers, we need to ensure that the camera is able to keep track 
-      of the marker in order to display the virtual object on top of it. This is such that when the environment changes (e.g. 
-      movement of the camera or objects), the virtual object can react to changes to the real world. 
+      According to [], tracking refers to real-time determination of the physical attributes of the
+      real environment. For AR, tracking is important as we need to constantly monitor the points of
+      reference are the same in the real world and the virtual world. For example, in the use of
+      fiducial markers, we need to ensure that the camera is able to keep track of the marker in
+      order to display the virtual object on top of it. This is such that when the environment
+      changes (e.g. movement of the camera or objects), the virtual object can react to changes to
+      the real world.
     </p>
     <h1 id="Important-Terms">Important Terms</h1>
     <p>
@@ -16,33 +22,197 @@
     <Card>
       <template #content>
         <ul>
-          <li><strong>Tracking:</strong> This term can be defined as keeping tabs on a particular object's position. In an AR context,
-          we can define it as knowing the relative position of the object in relation to the AR system. </li>
-          <li><strong>Calibration:</strong> This term refers to adjusting measurements by comparing two different measurements made by two different devices. It is akin
-          to calibrating a weighing scale. Sometimes, the display on the scale would be off centered and you would need re-calibrate it by resetting it on a flat surface.</li>
-          <li><strong>Registration:</strong> This term refers to the alignment of virtual objects with real-world objects in a shared space. 
-            To achieve this, we need a reference that defines the positions of all objects, typically represented using coordinate systems 
-            for both the real and virtual environments. Without proper alignment or "scaling" between these coordinate systems, it becomes 
-            challenging to accurately determine distances between objects, making it difficult to position virtual objects relative to the real world.</li>
+          <li>
+            <strong>Tracking:</strong> This term can be defined as keeping tabs on a particular
+            object's position. In an AR context, we can define it as knowing the relative position
+            of the object in relation to the AR system.
+          </li>
+          <li>
+            <strong>Calibration:</strong> This term refers to adjusting measurements by comparing
+            two different measurements made by two different devices. It is akin to calibrating a
+            weighing scale. Sometimes, the display on the scale would be off centered and you would
+            need re-calibrate it by resetting it on a flat surface.
+          </li>
+          <li>
+            <strong>Registration:</strong> This term refers to the alignment of virtual objects with
+            real-world objects in a shared space. To achieve this, we need a reference that defines
+            the positions of all objects, typically represented using coordinate systems for both
+            the real and virtual environments. Without proper alignment or "scaling" between these
+            coordinate systems, it becomes challenging to accurately determine distances between
+            objects, making it difficult to position virtual objects relative to the real world.
+          </li>
         </ul>
       </template>
     </Card>
-  <p> Calibration and Registration are concepts required for object tracking. The sensors in the AR system would need to know what is the distance between the camera and 
-    the object (calibration) and how to align the virtual object with the real object (registration). Hence, it is important to keep these terms and how they work in mind as
-    we go in depth to object tracking.
-  </p>
-  <h1 id="Object-Recognition">Object Recognition</h1>
-  <p>
-    Before an object can be tracked, the computer must first identify the presence of objects within an image. An intuitive way to understand this is by considering how humans perceive interesting or distinct elements in a picture. 
-    This process of identifying such significant features is known as "feature extraction".
-  </p>
-  <h1 id="Steps-of-Object-Tracking">Steps of Object Tracking</h1>
-  <p>
-    So far, what we have discussed is in the context of a single frame of and image. In order to track an object, we would need to consider the dynamic changes in the environment.
-    As discussed previously, we would need 
-  </p>
-  <p>
-    In a typical object tracking scenario, 
-  </p>
+    <p>
+      Calibration and Registration are concepts required for object tracking. The sensors in the AR
+      system would need to know what is the distance between the camera and the object (calibration)
+      and how to align the virtual object with the real object (registration). Hence, it is
+      important to keep these terms and how they work in mind as we go in depth to object tracking.
+    </p>
+    <h1 id="Object-Recognition">Object Recognition</h1>
+    <p>
+      Before an object can be tracked, the computer must first identify the presence of objects
+      within an image. An intuitive way to understand this is by considering how humans perceive
+      interesting or distinct elements in a picture. This process of identifying such significant
+      features is known as "feature extraction". So continuing with the analogy, our eyes are able
+      to filter out the uninteresting background and focus on the object of interest. A computer
+      would do this instead with the help of algorithms or filters. A simple example would be an
+      edge detection algorithm.
+    </p>
+    <h2 id="Edge-Detection">Edge Detection</h2>
+    <p>
+      The idea behind edge detection is to identify the boundaries of objects within an image. This
+      is done by detecting sharp changes in intensity in an image. The algorithm we will showcase is
+      the Sobel Operator. So in the image below, we have a simple image of a 'insert image here'. To
+      simplify the calculations that we will perform, we will convert the image into grayscale.
+    </p>
+    <div style="display: flex; justify-content: space-around">
+      <div style="text-align: center">
+        <Image
+          src="/src/assets/picture.png"
+          alt="Color Image"
+          style="display: block; margin: 0 auto"
+        />
+        <p>Color Image</p>
+      </div>
+      <div style="text-align: center">
+        <Image
+          src="/src/assets/picture.png"
+          alt="Grayscale Image"
+          style="display: block; margin: 0 auto"
+        />
+        <p>Grayscale Image</p>
+      </div>
+    </div>
+    <p>
+      Remember that a computer sees an image as a matrix of pixels, so in each number and pixel in
+      the matrix, it represents the intensity of the pixel. So the more intense the pixel is, the
+      brighter it is. Imagine running your hand over a surface with bumps, the bumps represent a
+      sharp change of intensity. The same idea can be applied through the use of the Sobel Operator.
+      The Sobel Operator is a filter which basically detects the changes in intensity horizontaly
+      and vertically. With the following matrix:
+    </p>
+    <div style="display: flex; justify-content: space-around">
+      <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
+        <tbody>
+          <tr>
+            <td style="border: 1px solid black">-1</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">-2</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">2</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">-1</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">1</td>
+          </tr>
+        </tbody>
+        <caption style="font-weight: bold; margin-bottom: 10px">
+          Vertical Sobel Mask
+        </caption>
+      </table>
+      <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
+        <caption style="font-weight: bold; margin-bottom: 10px">
+          Horizontal Sobel Mask
+        </caption>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid black">-1</td>
+            <td style="border: 1px solid black">-2</td>
+            <td style="border: 1px solid black">-1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">1</td>
+            <td style="border: 1px solid black">2</td>
+            <td style="border: 1px solid black">1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      If we have a 6 by  matrix of pixels, we can apply the Sobel Operator to detect the edges in this 6 by 6 matrix of pixels. Using an extreme example of the image below:
+    </p>
+    <div style="display: flex; justify-content: space-around">
+      <div style="text-align: center">
+        <Image
+          src="/src/assets/picture.png"
+          alt="Edge Detection Example"
+          style="display: block; margin: 0 auto"
+        />
+        <p>Edge Detection Example</p>
+      </div>
+        <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
+        <caption style="font-weight: bold; margin-bottom: 10px">
+          Example Matrix
+        </caption>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h1 id="Steps-of-Object-Tracking">Steps of Object Tracking</h1>
+    <p>
+      So far, what we have discussed is in the context of a single frame of and image. In order to
+      track an object, we would need to consider the dynamic changes in the environment. As
+      discussed previously, we would need
+    </p>
+    <p>In a typical object tracking scenario,</p>
   </div>
 </template>
