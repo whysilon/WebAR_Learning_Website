@@ -25,6 +25,10 @@ const menuItems = ref([
     label: 'Computer Vision',
     items: cvMenu.value,
   },
+  {
+    label: 'Exercise',
+    route: '/exercise',
+  }
 ])
 </script>
 

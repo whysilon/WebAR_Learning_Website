@@ -4,6 +4,7 @@ import HomeView from '@/views/HomeView.vue'
 import computerVision from './computerVision'
 import augmentedReality from './augmentedReality'
 import TestingView from '@/views/TestingView.vue'
+import ExerciseLayout from '@/layouts/ExerciseLayout.vue'
 
 export default [
   {
@@ -21,6 +22,11 @@ export default [
         name: 'Document',
         component: ModuleLayout,
         children: [...augmentedReality, ...computerVision],
+      },
+      {
+        path: 'exercise',
+        name: 'Exercise',
+        component: ExerciseLayout,
       },
       {
         path:'testing',
