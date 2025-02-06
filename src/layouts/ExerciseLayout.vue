@@ -1,3 +1,8 @@
 <template>
-    <h1>Nothing</h1>
+    <div>
+        <router-view id="exercise-content"/>
+    </div>
+    <div>
+        <router-view name="module"/>
+    </div>
 </template>
