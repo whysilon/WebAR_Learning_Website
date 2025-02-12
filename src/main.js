@@ -9,7 +9,6 @@ import './assets/styles.scss'
 const app = createApp(App)
 // Code editor
 
-
 // PrimeVue
 const Noir = definePreset(Aura, {
   semantic: {

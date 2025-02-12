@@ -34,9 +34,9 @@ import { Card, Image } from 'primevue'
   </Card>
   <h2 id="History-of-AR">History of AR</h2>
   <p>
-    The very first example of Mixed Reality is the Sensorama of 1957 which was created by Morton Heilig. It is
-    a machine which includes a display, fans, smell generators and stereo speakers. It aimed to
-    target the different senses to give the user a more immersive experience.
+    The very first example of Mixed Reality is the Sensorama of 1957 which was created by Morton
+    Heilig. It is a machine which includes a display, fans, smell generators and stereo speakers. It
+    aimed to target the different senses to give the user a more immersive experience.
   </p>
   <p>
     In 1966, the development of the first head-mounted display system for AR started. It was

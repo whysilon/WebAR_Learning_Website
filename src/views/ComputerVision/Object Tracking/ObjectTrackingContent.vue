@@ -140,18 +140,19 @@ import { Column, DataTable, Image } from 'primevue'
       </table>
     </div>
     <p>
-      If we have a 6 by 6 matrix of pixels, we can apply the Sobel Operator to detect the edges in this 6 by 6 matrix of pixels. Using an extreme example of the image below:
+      If we have a 6 by 6 matrix of pixels, we can apply the Sobel Operator to detect the edges in
+      this 6 by 6 matrix of pixels. Using an extreme example of the image below:
     </p>
     <div style="display: flex; justify-content: space-around">
       <div style="text-align: center">
-      <p>Edge Detection Example</p>
+        <p>Edge Detection Example</p>
         <Image
           src="/src/assets/picture.png"
           alt="Edge Detection Example"
           style="display: block; margin: 0 auto"
         />
       </div>
-        <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
+      <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
         <caption style="font-weight: bold; margin-bottom: 10px">
           Example Matrix
         </caption>
@@ -208,23 +209,23 @@ import { Column, DataTable, Image } from 'primevue'
       </table>
     </div>
     <p>
-      Essentially, what we want to do now is to find the in which the intensity changes the most. The Sobel operator helps us to do this by using the kernel (3x3 matrix) to convolve
-      the image. We want to find the gradient of the pixel intensity in the x and y direction and we will then find the absolute magnitude of the gradient by
-      adding the x-component and y-component together. The higher this value is, the more likely it is part of an edge.
+      Essentially, what we want to do now is to find the in which the intensity changes the most.
+      The Sobel operator helps us to do this by using the kernel (3x3 matrix) to convolve the image.
+      We want to find the gradient of the pixel intensity in the x and y direction and we will then
+      find the absolute magnitude of the gradient by adding the x-component and y-component
+      together. The higher this value is, the more likely it is part of an edge.
     </p>
-    <p>
-      To demonstrate, first let's calculate 
-    </p>
+    <p>To demonstrate, first let's calculate</p>
     <div style="display: flex; justify-content: space-around">
       <div style="text-align: center">
-      <p>Edge Detection Example</p>
+        <p>Edge Detection Example</p>
         <Image
           src="/src/assets/picture.png"
           alt="Edge Detection Example"
           style="display: block; margin: 0 auto"
         />
       </div>
-        <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
+      <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
         <caption style="font-weight: bold; margin-bottom: 10px">
           Result Matrix
         </caption>
@@ -268,8 +269,11 @@ import { Column, DataTable, Image } from 'primevue'
         </tbody>
       </table>
     </div>
-    <p> As we can see in the resultant matrix, the convoluted matrix shows the changes in the gradient pixels and we can then tell that areas with a high intensity are the 
-      regions which have edges. The same can be done with the horizontal sobel mask. </p>
+    <p>
+      As we can see in the resultant matrix, the convoluted matrix shows the changes in the gradient
+      pixels and we can then tell that areas with a high intensity are the regions which have edges.
+      The same can be done with the horizontal sobel mask.
+    </p>
     <h1 id="Steps-of-Object-Tracking">Steps of Object Tracking</h1>
     <p>
       So far, what we have discussed is in the context of a single frame of and image. In order to

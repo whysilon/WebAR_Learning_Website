@@ -11,7 +11,10 @@ const arMenu = ref([
   { label: 'Introduction to AR', route: '/docs/AR/intro-to-AR' },
   { label: 'Types of AR', route: '/docs/AR/types-of-AR' },
 ])
-
+const exerciseMenu = ref([
+  { label: 'Augmented Reality Exercise', route: '/exercise/AR' },
+  { label: 'Computer Vision Exercise', route: '/exercise/CV' },
+])
 const menuItems = ref([
   {
     label: 'Home',
@@ -27,8 +30,8 @@ const menuItems = ref([
   },
   {
     label: 'Exercise',
-    route: '/exercise',
-  }
+    items: exerciseMenu.value,
+  },
 ])
 </script>
 

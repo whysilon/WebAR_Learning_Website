@@ -5,6 +5,7 @@ import computerVision from './computerVision'
 import augmentedReality from './augmentedReality'
 import TestingView from '@/views/TestingView.vue'
 import ExerciseLayout from '@/layouts/ExerciseLayout.vue'
+import exercise from './exercise'
 
 export default [
   {
@@ -27,10 +28,11 @@ export default [
         path: 'exercise',
         name: 'Exercise',
         component: ExerciseLayout,
+        children: [...exercise],
       },
       {
-        path:'testing',
-        name:'testing',
+        path: 'testing',
+        name: 'testing',
         component: TestingView,
       },
     ],

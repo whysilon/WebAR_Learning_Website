@@ -3,10 +3,10 @@ import { Repl, useStore } from '@vue/repl'
 import CodeMirror from '@vue/repl/codemirror-editor'
 import { ref } from 'vue'
 
-const startingCode = ref("App.vue");
+const startingCode = ref('App.vue')
 
 const template = ref({
-    welcomeSFC: `
+  welcomeSFC: `
     <script setup>
     import { ref } from 'vue'
 
@@ -17,7 +17,7 @@ const template = ref({
     <h1>{{ msg }}</h1>
     <\/template>
     `,
-    newSFC: `
+  newSFC: `
     <script setup>
     import { ref } from 'vue'
 
@@ -27,22 +27,15 @@ const template = ref({
     <template>
     <h1>{{ msg }}</h1>
     <\/template>
-    `
-});
+    `,
+})
 
-const store = useStore(
-    {
-        mainFile: startingCode,
-        template: template
-    }
-)
-
-
+const store = useStore({
+  mainFile: startingCode,
+  template: template,
+})
 </script>
 
 <template>
-  <Repl 
-  :editor="CodeMirror"
-  :store="store"
-   />
+  <Repl :editor="CodeMirror" :store="store" />
 </template>
