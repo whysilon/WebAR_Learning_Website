@@ -6,6 +6,7 @@ import augmentedReality from './augmentedReality'
 import TestingView from '@/views/TestingView.vue'
 import ExerciseLayout from '@/layouts/ExerciseLayout.vue'
 import exercise from './exercise'
+import IFrame from '@/views/IFrame.vue'
 
 export default [
   {
@@ -37,4 +38,9 @@ export default [
       },
     ],
   },
+  {
+    path: '/embedded',
+    name: 'Embedded',
+    component: IFrame,
+  }
 ]

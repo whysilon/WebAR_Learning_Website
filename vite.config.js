@@ -9,7 +9,13 @@ import { PrimeVueResolver } from '@primevue/auto-import-resolver'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('a-'),
+        },
+      },
+    }),
     vueJsx(),
     vueDevTools(),
     Components({
@@ -17,7 +23,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    assetsInclude: ['**/*.ttf', '**/*.woff', '**/*.woff2'],
+    assetsInclude: ['**/*.ttf', '**/*.woff', '**/*.woff2', '**/*.mind'],
   },
   resolve: {
     alias: {
