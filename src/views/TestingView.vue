@@ -1,10 +1,29 @@
 <template>
-  <div>
+  <div class="container">
     <p>Hi</p>
-    <iframe src='/embedded' width="100%" height="500px"></iframe>
+
+    <iframe class="camera" src='/embedded' ></iframe>
+
   </div>
 </template>
 
 <script>
-const iframeSrc = '/embedded';
+
 </script>
+
+<style scoped>
+.camera {
+  flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.text {
+  flex: 1;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  height: 100vh;
+}
+</style>
