@@ -1,10 +1,10 @@
 <template>
 <div id="container">
   <div id="editor">
-  <Button @click="runCode">Run Code</Button>
+  <Button @click="runCode" label="Run Code"/>
     <code-mirror v-model="props.placeholder" basic :lang="lang" ref="cm" @update:model-value="handleCodeChange" wrap/>
   </div>
-  <div>
+  <div id="preview">
     <iframe ref="preview"></iframe>
   </div>
 </div>
@@ -13,7 +13,7 @@
 <script setup>
 import { html } from '@codemirror/lang-html';
 import { Button } from 'primevue';
-import { ref, } from 'vue';
+import { ref } from 'vue';
 import CodeMirror from 'vue-codemirror6';
 
 const props = defineProps({
@@ -28,10 +28,9 @@ const cm = ref(null);
 function runCode() {
   const iframe = document.createElement("iframe");
   iframe.style.width = "100%";
-  iframe.style.height = "400px";
+  iframe.style.height = "500px";
   const frameContainer = document.querySelector("iframe");
   frameContainer.replaceWith(iframe);
-  console.log(frameContainer)
   // Inject code into the iframe
   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
   iframeDoc.open();
