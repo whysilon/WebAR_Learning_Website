@@ -12,7 +12,7 @@ const arMenu = ref([
   { label: 'Types of AR', route: '/docs/AR/types-of-AR' },
 ])
 const exerciseMenu = ref([
-  { label: 'Augmented Reality Exercise', route: '/exercise/AR' },
+  { label: 'Augmented Reality Exercise', route: '/exercise/AR/home' },
   { label: 'Computer Vision Exercise', route: '/exercise/CV' },
 ])
 const menuItems = ref([
