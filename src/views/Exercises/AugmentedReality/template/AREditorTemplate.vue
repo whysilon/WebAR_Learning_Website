@@ -1,39 +1,46 @@
 <template>
-<div id="container">
-  <div id="editor">
-  <Button @click="runCode" label="Run Code"/>
-    <code-mirror v-model="props.placeholder" basic :lang="lang" ref="cm" @update:model-value="handleCodeChange" wrap/>
+  <div id="container">
+    <div id="editor">
+      <Button @click="runCode" label="Run Code" />
+      <code-mirror
+        v-model="props.placeholder"
+        basic
+        :lang="lang"
+        ref="cm"
+        @update:model-value="handleCodeChange"
+        wrap
+      />
+    </div>
+    <div id="preview">
+      <iframe ref="preview"></iframe>
+    </div>
   </div>
-  <div id="preview">
-    <iframe ref="preview"></iframe>
-  </div>
-</div>
 </template>
 
 <script setup>
-import { html } from '@codemirror/lang-html';
-import { Button } from 'primevue';
-import { ref } from 'vue';
-import CodeMirror from 'vue-codemirror6';
+import { html } from '@codemirror/lang-html'
+import { Button } from 'primevue'
+import { ref } from 'vue'
+import CodeMirror from 'vue-codemirror6'
 
 const props = defineProps({
   placeholder: String,
 })
 // Contains code that user is editing and the default code.
-const codeValue = ref(props.placeholder || "");
+const codeValue = ref(props.placeholder || '')
 // Contains the required defaults such as <html> tags.
-const lang = html();
-const cm = ref(null);
+const lang = html()
+const cm = ref(null)
 
 function runCode() {
-  const iframe = document.createElement("iframe");
-  iframe.style.width = "100%";
-  iframe.style.height = "500px";
-  const frameContainer = document.querySelector("iframe");
-  frameContainer.replaceWith(iframe);
+  const iframe = document.createElement('iframe')
+  iframe.style.width = '100%'
+  iframe.style.height = '500px'
+  const frameContainer = document.querySelector('iframe')
+  frameContainer.replaceWith(iframe)
   // Inject code into the iframe
-  const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-  iframeDoc.open();
+  const iframeDoc = iframe.contentDocument || iframe.contentWindow.document
+  iframeDoc.open()
   iframeDoc.write(`
   <html>
       <head>
@@ -45,12 +52,12 @@ function runCode() {
         ${codeValue.value} <!-- Dynamic User Code -->
       <\/body>
       <\/html>
-    `);
-  iframeDoc.close();
+    `)
+  iframeDoc.close()
 }
 
 function handleCodeChange(newValue) {
-  code.value = newValue;
+  code.value = newValue
 }
 </script>
 

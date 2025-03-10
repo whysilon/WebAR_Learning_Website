@@ -42,5 +42,5 @@ export default [
     path: '/embedded',
     name: 'Embedded',
     component: IFrame,
-  }
+  },
 ]
