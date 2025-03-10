@@ -17,7 +17,6 @@ export default {
       <!-- This is where child components will be rendered -->
       <RouterView />
     </main>
-    <Footer />
   </div>
 </template>
 

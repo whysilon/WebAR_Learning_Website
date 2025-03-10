@@ -3,7 +3,7 @@
     <div id="editor">
       <Button @click="runCode" label="Run Code" />
       <code-mirror
-        v-model="props.placeholder"
+        v-model="code"
         basic
         :lang="lang"
         ref="cm"
@@ -12,7 +12,7 @@
       />
     </div>
     <div id="preview">
-      <iframe ref="preview"></iframe>
+      <iframe :id="iframeId"></iframe>
     </div>
   </div>
 </template>
@@ -20,26 +20,35 @@
 <script setup>
 import { html } from '@codemirror/lang-html'
 import { Button } from 'primevue'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import CodeMirror from 'vue-codemirror6'
 
 const props = defineProps({
   placeholder: String,
+  iframeId: String,
 })
 // Contains code that user is editing and the default code.
-const codeValue = ref(props.placeholder || '')
+const code = ref('')
+const iframeId = ref(props.iframeId)
 // Contains the required defaults such as <html> tags.
 const lang = html()
 const cm = ref(null)
 
+onMounted(() => {
+  code.value = props.placeholder || '';
+});
+
 function runCode() {
   const iframe = document.createElement('iframe')
+  iframe.id = iframeId.value
   iframe.style.width = '100%'
   iframe.style.height = '500px'
-  const frameContainer = document.querySelector('iframe')
+  const frameContainer = document.querySelector(`iframe#${iframeId.value}`)
+  console.log(frameContainer,`iframe#${iframeId.value}`)
   frameContainer.replaceWith(iframe)
   // Inject code into the iframe
   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document
+  console.log(iframeDoc)
   iframeDoc.open()
   iframeDoc.write(`
   <html>
@@ -49,7 +58,7 @@ function runCode() {
         <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"><\/script>
       <\/head>
       <body>
-        ${codeValue.value} <!-- Dynamic User Code -->
+        ${code.value} <!-- Dynamic User Code -->
       <\/body>
       <\/html>
     `)
