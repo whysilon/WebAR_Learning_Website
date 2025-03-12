@@ -64,27 +64,27 @@ import { Column, DataTable, Image } from 'primevue'
     <p>
       The idea behind edge detection is to identify the boundaries of objects within an image. This
       is done by detecting sharp changes in intensity in an image. The algorithm we will showcase is
-      the Sobel Operator. So in the image below, we have a simple image of a 'insert image here'. To
+      the Sobel Operator. So in the image below, we have a simple image of NTU's Coat of Arms. To
       simplify the calculations that we will perform, we will convert the image into grayscale.
     </p>
-    <div style="display: flex; justify-content: space-around">
-      <div style="text-align: center">
-        <Image
-          src="/src/assets/picture.png"
-          alt="Color Image"
-          style="display: block; margin: 0 auto"
-        />
-        <p>Color Image</p>
-      </div>
-      <div style="text-align: center">
-        <Image
-          src="/src/assets/picture.png"
-          alt="Grayscale Image"
-          style="display: block; margin: 0 auto"
-        />
-        <p>Grayscale Image</p>
-      </div>
+    <div class="container">
+    <div class="image-box">
+      <Image
+        src="/src/assets/CV/ntu_coat_of_arms.png"
+        alt="Original"
+        width="50%"
+      />
+      <p>Original Image</p>
     </div>
+    <div class="image-box">
+      <Image
+        src="/src/assets/CV/ntu_coat_grayscale.png"
+        alt="Grayscale"
+        width="50%"
+      />
+      <p>Grayscale Image</p>
+    </div>
+  </div>
     <p>
       Remember that a computer sees an image as a matrix of pixels, so in each number and pixel in
       the matrix, it represents the intensity of the pixel. So the more intense the pixel is, the
@@ -141,94 +141,71 @@ import { Column, DataTable, Image } from 'primevue'
     </div>
     <p>
       If we have a 6 by 6 matrix of pixels, we can apply the Sobel Operator to detect the edges in
-      this 6 by 6 matrix of pixels. Using an extreme example of the image below:
-    </p>
-    <div style="display: flex; justify-content: space-around">
-      <div style="text-align: center">
-        <p>Edge Detection Example</p>
-        <Image
-          src="/src/assets/picture.png"
-          alt="Edge Detection Example"
-          style="display: block; margin: 0 auto"
-        />
-      </div>
-      <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
-        <caption style="font-weight: bold; margin-bottom: 10px">
-          Example Matrix
-        </caption>
-        <tbody>
-          <tr>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">10</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-            <td style="border: 1px solid black">0</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p>
-      Essentially, what we want to do now is to find the in which the intensity changes the most.
+      this 6 by 6 matrix of pixels. Essentially, what we want to do now is to find the in which the intensity changes the most.
       The Sobel operator helps us to do this by using the kernel (3x3 matrix) to convolve the image.
       We want to find the gradient of the pixel intensity in the x and y direction and we will then
       find the absolute magnitude of the gradient by adding the x-component and y-component
       together. The higher this value is, the more likely it is part of an edge.
     </p>
-    <p>To demonstrate, first let's calculate</p>
     <div style="display: flex; justify-content: space-around">
-      <div style="text-align: center">
-        <p>Edge Detection Example</p>
-        <Image
-          src="/src/assets/picture.png"
-          alt="Edge Detection Example"
-          style="display: block; margin: 0 auto"
-        />
-      </div>
       <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
+
+        <tbody>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">10</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+            <td style="border: 1px solid black">0</td>
+          </tr>
+        </tbody>
         <caption style="font-weight: bold; margin-bottom: 10px">
-          Result Matrix
+          Example Matrix
         </caption>
+      </table>
+      <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
+
         <tbody>
           <tr>
             <td style="border: 1px solid black">0</td>
@@ -267,13 +244,37 @@ import { Column, DataTable, Image } from 'primevue'
             <td style="border: 1px solid black">0</td>
           </tr>
         </tbody>
+        <caption style="font-weight: bold; margin-bottom: 10px">
+          Result Matrix
+        </caption>
       </table>
     </div>
     <p>
       As we can see in the resultant matrix, the convoluted matrix shows the changes in the gradient
       pixels and we can then tell that areas with a high intensity are the regions which have edges.
-      The same can be done with the horizontal sobel mask.
+      The same can be done with the horizontal sobel mask. Below is an example on how it would look like when you apply the Sobel Mask.
     </p>
+    <div class="container">
+      <div class="image-box">
+        <Image
+          src="/src/assets/CV/ntu_coat_of_arms.png"
+          alt="Edge Detection Example"
+          width="50%"
+          preview
+        />
+        <p>Original</p>
+      </div>
+      <div class="image-box">
+        <Image
+          src="/src/assets/CV/ntu_coat_sobel.png"
+          alt="Edge Detection Example"
+          width="50%"
+          preview
+        />
+        <p>Sobel Masked</p>
+      </div>
+    </div>
+
     <h1 id="Steps-of-Object-Tracking">Steps of Object Tracking</h1>
     <p>
       So far, what we have discussed is in the context of a single frame of and image. In order to
@@ -283,3 +284,20 @@ import { Column, DataTable, Image } from 'primevue'
     <p>In a typical object tracking scenario,</p>
   </div>
 </template>
+
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+</style>

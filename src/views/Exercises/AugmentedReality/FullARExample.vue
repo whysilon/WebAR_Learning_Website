@@ -12,7 +12,7 @@ const firstStep = `
 `
 
 const firstARScene = `
-<a-scene mindar-image="imageTargetSrc: /src/assets/ntu_logo.mind;" 
+<a-scene mindar-image="imageTargetSrc: /src/assets/AR/ntu_logo.mind;" 
 color-space="sRGB" 
 renderer="colorManagement: true, physicallyCorrectLights" 
 vr-mode-ui="enabled: false" 
@@ -54,11 +54,11 @@ device-orientation-permission-ui="enabled: false">
   </p>
   <div class="container">
     <div class="image-box">
-      <Image src="/src/assets/low_contrast.png" alt="Low Contrast Image" width="50%" preview />
+      <Image src="/src/assets/AR/low_contrast.png" alt="Low Contrast Image" width="50%" preview />
       <p>Low Contrast Image</p>
     </div>
     <div class="image-box">
-      <Image src="/src/assets/high_contrast.png" alt="High Contrast Image" width="50%" preview />
+      <Image src="/src/assets/AR/high_contrast.png" alt="High Contrast Image" width="50%" preview />
       <p>High Contrast Image</p>
     </div>
   </div>
@@ -73,7 +73,7 @@ device-orientation-permission-ui="enabled: false">
   <div class="container">
     <div class="image-box">
       <Image
-        src="/src/assets/low_contrast_feature_map.png"
+        src="/src/assets/AR/low_contrast_feature_map.png"
         alt="Low Contrast Feature Map"
         width="50%"
         preview
@@ -82,7 +82,7 @@ device-orientation-permission-ui="enabled: false">
     </div>
     <div class="image-box">
       <Image
-        src="/src/assets/high_contrast_feature_map.png"
+        src="/src/assets/AR/high_contrast_feature_map.png"
         alt="High Contrast Featire Map"
         width="50%"
         preview

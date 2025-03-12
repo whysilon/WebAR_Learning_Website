@@ -3,10 +3,8 @@ import ModuleLayout from '@/layouts/ModuleLayout.vue'
 import HomeView from '@/views/HomeView.vue'
 import computerVision from './computerVision'
 import augmentedReality from './augmentedReality'
-import TestingView from '@/views/TestingView.vue'
 import ExerciseLayout from '@/layouts/ExerciseLayout.vue'
 import exercise from './exercise'
-import IFrame from '@/views/IFrame.vue'
 
 export default [
   {
@@ -31,16 +29,6 @@ export default [
         component: ExerciseLayout,
         children: [...exercise],
       },
-      {
-        path: 'testing',
-        name: 'testing',
-        component: TestingView,
-      },
     ],
-  },
-  {
-    path: '/embedded',
-    name: 'Embedded',
-    component: IFrame,
   },
 ]

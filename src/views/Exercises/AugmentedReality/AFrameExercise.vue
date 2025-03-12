@@ -37,4 +37,7 @@ const code = `
     simple syntax (due to HTML) makes it easy to understand and use. Let us walk through a very
     simple way to create a house in A-FRAME and display it in real life in the next exercise.
   </p>
+  <Button asChild v-slot="slotProps">
+    <RouterLink :class="slotProps.class" to="/exercise/AR/3">Next Page</RouterLink>
+  </Button>
 </template>
