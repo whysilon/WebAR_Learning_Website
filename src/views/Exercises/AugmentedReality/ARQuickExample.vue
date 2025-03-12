@@ -44,7 +44,7 @@ const code = ref(`
   </p>
   <div id="code-editor">
     <h2>Code snippet</h2>
-    <AREditorTemplate :placeholder="code" />
+    <AREditorTemplate :placeholder="code" :iframeId="quickExample" />
   </div>
   <h2>Explanation</h2>
   <p>
@@ -55,7 +55,7 @@ const code = ref(`
     visbility and repositioning of the object (a-entity).
   </p>
   <Button asChild v-slot="slotProps">
-    <RouterLink :class="slotProps.class" to="/exercises/AR/2">Next Page</RouterLink>
+    <RouterLink :class="slotProps.class" to="/exercise/AR/2">Next Page</RouterLink>
   </Button>
 </template>
 

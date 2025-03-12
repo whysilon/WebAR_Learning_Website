@@ -26,7 +26,7 @@ const code = `
     &lt;a-scene&gt; tag. This tag is the main container for all the 3D objects that you want to
     display. The other tags are the objects that you want to put into that scene.
   </p>
-  <AREditorTemplate :placeholder="code" />
+  <AREditorTemplate :placeholder="code" :iframeId="aframe" />
   <p>
     The code will create a scene with a box, a sphere, and lastly a cylinder. The objects are sit
     nicely on top of the plane that is also defined within the code. The sky is also created,

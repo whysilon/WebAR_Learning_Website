@@ -1,7 +1,9 @@
 import AFrameExercise from '@/views/Exercises/AugmentedReality/AFrameExercise.vue'
 import ARExerciseStartPage from '@/views/Exercises/AugmentedReality/ARExerciseStartPage.vue'
-import AugmentedRealityExercise from '@/views/Exercises/AugmentedReality/AugmentedRealityExercise.vue'
+import ARQuickExample from '@/views/Exercises/AugmentedReality/ARQuickExample.vue'
 import FullARExample from '@/views/Exercises/AugmentedReality/FullARExample.vue'
+import CVExerciseStartPage from '@/views/Exercises/ComputerVision/CVExerciseStartPage.vue'
+import CVQuickExample from '@/views/Exercises/ComputerVision/CVQuickExample.vue'
 
 export default [
   {
@@ -16,7 +18,7 @@ export default [
       {
         path: '1',
         components: {
-          default: AugmentedRealityExercise,
+          default: ARQuickExample,
         },
       },
       {
@@ -35,8 +37,19 @@ export default [
   },
   {
     path: 'CV',
-    components: {
-      default: AugmentedRealityExercise,
-    },
+    children: [
+      {
+        path: 'home',
+        components: {
+          default: CVExerciseStartPage,
+        },
+      },
+      {
+        path: '1',
+        components: {
+          default: CVQuickExample,
+        }
+      }
+    ],
   },
 ]

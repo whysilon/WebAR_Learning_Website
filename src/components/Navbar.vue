@@ -13,7 +13,7 @@ const arMenu = ref([
 ])
 const exerciseMenu = ref([
   { label: 'Augmented Reality Exercise', route: '/exercise/AR/home' },
-  { label: 'Computer Vision Exercise', route: '/exercise/CV' },
+  { label: 'Computer Vision Exercise', route: '/exercise/CV/home' },
 ])
 const menuItems = ref([
   {
