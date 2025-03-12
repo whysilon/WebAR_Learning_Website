@@ -18,14 +18,14 @@ import { Card, Divider, Image } from 'primevue'
 
 <style scoped>
 .container {
-  display: flex; 
-  gap: 2rem; 
-  align-items: flex-start; 
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
 .content {
   flex: 1;
   max-width: 50%;
-  margin: 1rem; 
+  margin: 1rem;
 }
 </style>

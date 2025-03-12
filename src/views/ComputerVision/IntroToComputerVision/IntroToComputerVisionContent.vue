@@ -3,7 +3,7 @@
   <p>
     Have you ever wondered how our eyes perceive the text you are currently reading? How are we able
     to "see" what we are seeing? And the last question is, how do cameras or computers even take
-    pictures or videos and convert them into somethign that they can understand?
+    pictures or videos and convert them into something that they can understand?
   </p>
   <p>
     In this module, we will be introducing the ideas of computer vision and how AR uses it to create
@@ -22,7 +22,7 @@
     this 4 by 4 grid below:
   </p>
   <div style="text-align: center">
-    <Image src="/src/assets/CV/tiles.png" alt="4x4 Grid" width="30%"/>
+    <Image src="/src/assets/CV/tiles.png" alt="4x4 Grid" width="30%" />
     <p>4 by 4 grid</p>
   </div>
   <p>
@@ -45,10 +45,4 @@
     with the correct orientation? This is why computer vision concepts such as object tracking and
     localisation are important.
   </p>
-  <h2 id="References">References</h2>
-  <ol style="list-style-type: none">
-    <li>[1] Lorem</li>
-    <li>[2] Ipsum</li>
-    <li>[3] Dolor</li>
-  </ol>
 </template>

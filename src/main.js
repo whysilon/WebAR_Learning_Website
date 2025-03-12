@@ -4,11 +4,8 @@ import { definePreset } from '@primevue/themes'
 import Aura from '@primevue/themes/aura'
 import App from './App.vue'
 import router from './router'
-import './assets/styles.scss'
 
 const app = createApp(App)
-// Code editor
-
 // PrimeVue
 const Noir = definePreset(Aura, {
   semantic: {

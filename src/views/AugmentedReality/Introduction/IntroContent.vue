@@ -11,7 +11,7 @@ import { Card, Image } from 'primevue'
     and the digital. But how does it really work?
   </p>
   <div style="text-align: center">
-    <Image src="/src/assets/AR/pokemon_gameplay.jpg" alt="Pokemon Go" width="50%"/>
+    <Image src="/src/assets/AR/pokemon_gameplay.jpg" alt="Pokemon Go" width="50%" />
     <p>Gameplay of Pokemon Go</p>
   </div>
   <p></p>
@@ -61,10 +61,10 @@ import { Card, Image } from 'primevue'
     compared to the traditional methods of training.
   </p>
   <p>
-    In 1999, ARToolKit was created by Hirokazu Kato and  released to the public
-    in 2001. The technology behind the ARToolKit is the usage of markers to keep track of the
-    position of the viewpoint and the virtual objects in relation to the marker. This marker is
-    known as a fiducial marker, which looks like the image below.
+    In 1999, ARToolKit was created by Hirokazu Kato and released to the public in 2001. The
+    technology behind the ARToolKit is the usage of markers to keep track of the position of the
+    viewpoint and the virtual objects in relation to the marker. This marker is known as a fiducial
+    marker, which looks like the image below.
   </p>
   <div style="text-align: center">
     <Image src="/src/assets/AR/Hiro_marker_ARjs.png" alt="Hiro Marker" />

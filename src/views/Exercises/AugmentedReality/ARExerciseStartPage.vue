@@ -2,8 +2,8 @@
   <h1>List of exercises/examples</h1>
   <p>
     Below are the list of examples and exercises that are available for you to try out. They will
-    have their own brief explanation and their releveance to Augmented Reality. Do note that all the examples below
-    uses HTML as the main language.
+    have their own brief explanation and their releveance to Augmented Reality. Do note that all the
+    examples below uses HTML as the main language.
   </p>
   <ul>
     <li>

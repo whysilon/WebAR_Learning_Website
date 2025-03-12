@@ -25,7 +25,7 @@ device-orientation-permission-ui="enabled: false">
     In this code, we will be running using
     <a href="https://hiukim.github.io/mind-ar-js-doc/">Mind AR</a> to do our simple AR exercise. In
     the enclosed example, this is a very simple example where we use the example given by the
-    library just as a quick explainer and example. 
+    library just as a quick explainer and example.
   </p>
   <p>
     The example is purely in HTML and uses A-FRAME to display the "augmented" part of the
@@ -47,8 +47,8 @@ device-orientation-permission-ui="enabled: false">
     <AREditorTemplate :placeholder="code" :iframeId="`quickExample`" />
   </div>
   <div class="image-box">
-      <Image src="/src/assets/AR/high_contrast.png" alt="High Contrast Image" width="50%" />
-      <p>Image to scan</p>
+    <Image src="/src/assets/AR/high_contrast.png" alt="High Contrast Image" width="50%" />
+    <p>Image to scan</p>
   </div>
   <h2>Explanation</h2>
   <p>

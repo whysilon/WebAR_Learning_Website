@@ -1,18 +1,17 @@
 <script setup>
-import { Column, DataTable, Image } from 'primevue'
+import { Image } from 'primevue'
 </script>
 
 <template>
   <div>
     <h1 id="Introduction">Introduction</h1>
     <p>
-      According to [], tracking refers to real-time determination of the physical attributes of the
-      real environment. For AR, tracking is important as we need to constantly monitor the points of
-      reference are the same in the real world and the virtual world. For example, in the use of
-      fiducial markers, we need to ensure that the camera is able to keep track of the marker in
-      order to display the virtual object on top of it. This is such that when the environment
-      changes (e.g. movement of the camera or objects), the virtual object can react to changes to
-      the real world.
+      Tracking refers to real-time determination of the physical attributes of the real environment.
+      For AR, tracking is important as we need to constantly monitor the points of reference are the
+      same in the real world and the virtual world. For example, in the use of fiducial markers, we
+      need to ensure that the camera is able to keep track of the marker in order to display the
+      virtual object on top of it. This is such that when the environment changes (e.g. movement of
+      the camera or objects), the virtual object can react to changes to the real world.
     </p>
     <h1 id="Important-Terms">Important Terms</h1>
     <p>
@@ -68,23 +67,15 @@ import { Column, DataTable, Image } from 'primevue'
       simplify the calculations that we will perform, we will convert the image into grayscale.
     </p>
     <div class="container">
-    <div class="image-box">
-      <Image
-        src="/src/assets/CV/ntu_coat_of_arms.png"
-        alt="Original"
-        width="50%"
-      />
-      <p>Original Image</p>
+      <div class="image-box">
+        <Image src="/src/assets/CV/ntu_coat_of_arms.png" alt="Original" width="50%" />
+        <p>Original Image</p>
+      </div>
+      <div class="image-box">
+        <Image src="/src/assets/CV/ntu_coat_grayscale.png" alt="Grayscale" width="50%" />
+        <p>Grayscale Image</p>
+      </div>
     </div>
-    <div class="image-box">
-      <Image
-        src="/src/assets/CV/ntu_coat_grayscale.png"
-        alt="Grayscale"
-        width="50%"
-      />
-      <p>Grayscale Image</p>
-    </div>
-  </div>
     <p>
       Remember that a computer sees an image as a matrix of pixels, so in each number and pixel in
       the matrix, it represents the intensity of the pixel. So the more intense the pixel is, the
@@ -141,15 +132,15 @@ import { Column, DataTable, Image } from 'primevue'
     </div>
     <p>
       If we have a 6 by 6 matrix of pixels, we can apply the Sobel Operator to detect the edges in
-      this 6 by 6 matrix of pixels. Essentially, what we want to do now is to find the in which the intensity changes the most.
-      The Sobel operator helps us to do this by using the kernel (3x3 matrix) to convolve the image.
-      We want to find the gradient of the pixel intensity in the x and y direction and we will then
-      find the absolute magnitude of the gradient by adding the x-component and y-component
-      together. The higher this value is, the more likely it is part of an edge.
+      this 6 by 6 matrix of pixels. Essentially, what we want to do now is to find the in which the
+      intensity changes the most. The Sobel operator helps us to do this by using the kernel (3x3
+      matrix) to convolve the image. We want to find the gradient of the pixel intensity in the x
+      and y direction and we will then find the absolute magnitude of the gradient by adding the
+      x-component and y-component together. The higher this value is, the more likely it is part of
+      an edge.
     </p>
     <div style="display: flex; justify-content: space-around">
       <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
-
         <tbody>
           <tr>
             <td style="border: 1px solid black">10</td>
@@ -205,7 +196,6 @@ import { Column, DataTable, Image } from 'primevue'
         </caption>
       </table>
       <table style="border-collapse: collapse; text-align: center; width: 30%; margin: 20px auto">
-
         <tbody>
           <tr>
             <td style="border: 1px solid black">0</td>
@@ -252,7 +242,8 @@ import { Column, DataTable, Image } from 'primevue'
     <p>
       As we can see in the resultant matrix, the convoluted matrix shows the changes in the gradient
       pixels and we can then tell that areas with a high intensity are the regions which have edges.
-      The same can be done with the horizontal sobel mask. Below is an example on how it would look like when you apply the Sobel Filter in both directions.
+      The same can be done with the horizontal sobel mask. Below is an example on how it would look
+      like when you apply the Sobel Filter in both directions.
     </p>
     <div class="container">
       <div class="image-box">
@@ -284,7 +275,6 @@ import { Column, DataTable, Image } from 'primevue'
     <p>In a typical object tracking scenario,</p>
   </div>
 </template>
-
 
 <style scoped>
 .container {

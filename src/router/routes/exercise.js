@@ -48,8 +48,8 @@ export default [
         path: '1',
         components: {
           default: CVQuickExample,
-        }
-      }
+        },
+      },
     ],
   },
 ]
