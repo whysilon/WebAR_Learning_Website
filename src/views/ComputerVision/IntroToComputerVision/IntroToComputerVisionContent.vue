@@ -22,7 +22,7 @@
     this 4 by 4 grid below:
   </p>
   <div style="text-align: center">
-    <Image src="/src/assets/picture.png" alt="4x4 Grid" />
+    <Image src="/src/assets/CV/tiles.png" alt="4x4 Grid" width="30%"/>
     <p>4 by 4 grid</p>
   </div>
   <p>

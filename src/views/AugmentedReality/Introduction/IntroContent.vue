@@ -7,18 +7,18 @@ import { Card, Image } from 'primevue'
   <p>
     Imagine walking through your neighborhood, phone in hand, when suddenly a Pikachu appears in the
     bushes. You throw a Poké Ball, and just like that, you're immersed in a new world layered on top
-    of the real one. This is augmented reality (AR) at work—blurring the line between the physical
+    of the real one. This is augmented reality (AR) at work — blurring the line between the physical
     and the digital. But how does it really work?
   </p>
   <div style="text-align: center">
-    <Image src="/src/assets/picture.png" alt="Pokemon Go" />
+    <Image src="/src/assets/AR/pokemon_gameplay.jpg" alt="Pokemon Go" width="50%"/>
     <p>Gameplay of Pokemon Go</p>
   </div>
   <p></p>
   <h2 id="Definition-of-AR">Definition of AR</h2>
   <p>
     What is Augmented Reality? As the term suggests, it involves enhancing the physical environment
-    in some way. < AR Definition > It involves three main characteristics [1]:
+    in some way. It involves three main characteristics:
   </p>
   <Card>
     <template #title> Characteristics of AR </template>
@@ -61,13 +61,13 @@ import { Card, Image } from 'primevue'
     compared to the traditional methods of training.
   </p>
   <p>
-    In 1999, ARToolKit was created. It was created by Hirokazu Kato and was released to the public
+    In 1999, ARToolKit was created by Hirokazu Kato and  released to the public
     in 2001. The technology behind the ARToolKit is the usage of markers to keep track of the
     position of the viewpoint and the virtual objects in relation to the marker. This marker is
     known as a fiducial marker, which looks like the image below.
   </p>
   <div style="text-align: center">
-    <Image src="/src/assets/picture.png" alt="Hiro Marker" />
+    <Image src="/src/assets/AR/Hiro_marker_ARjs.png" alt="Hiro Marker" />
     <p>Hiro Marker</p>
   </div>
   <p>
@@ -82,10 +82,4 @@ import { Card, Image } from 'primevue'
     This is just a brief history of AR, there are many more examples of AR that have been developed
     over the years.
   </p>
-  <h2 id="References">References</h2>
-  <ol style="list-style-type: none">
-    <li>[1] Lorem</li>
-    <li>[2] Ipsum</li>
-    <li>[3] Dolor</li>
-  </ol>
 </template>

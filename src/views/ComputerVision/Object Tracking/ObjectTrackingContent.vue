@@ -252,7 +252,7 @@ import { Column, DataTable, Image } from 'primevue'
     <p>
       As we can see in the resultant matrix, the convoluted matrix shows the changes in the gradient
       pixels and we can then tell that areas with a high intensity are the regions which have edges.
-      The same can be done with the horizontal sobel mask. Below is an example on how it would look like when you apply the Sobel Mask.
+      The same can be done with the horizontal sobel mask. Below is an example on how it would look like when you apply the Sobel Filter in both directions.
     </p>
     <div class="container">
       <div class="image-box">
@@ -271,7 +271,7 @@ import { Column, DataTable, Image } from 'primevue'
           width="50%"
           preview
         />
-        <p>Sobel Masked</p>
+        <p>Sobel Filter</p>
       </div>
     </div>
 

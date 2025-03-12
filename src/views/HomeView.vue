@@ -18,14 +18,14 @@ import { Card, Divider, Image } from 'primevue'
 
 <style scoped>
 .container {
-  display: flex; /* Use Flexbox to align child divs side by side */
-  gap: 2rem; /* Adds space between the two sections */
-  align-items: flex-start; /* Align items at the top */
+  display: flex; 
+  gap: 2rem; 
+  align-items: flex-start; 
 }
 
 .content {
-  flex: 1; /* Make both sections equal width */
-  max-width: 50%; /* Optional: Control the width */
-  margin: 1rem; /* Add space between the sections */
+  flex: 1;
+  max-width: 50%;
+  margin: 1rem; 
 }
 </style>

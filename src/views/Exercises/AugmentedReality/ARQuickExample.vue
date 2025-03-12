@@ -1,6 +1,6 @@
 <script setup>
 import AREditorTemplate from '@/views/Exercises/AugmentedReality/template/AREditorTemplate.vue'
-import { Button } from 'primevue'
+import { Button, Image } from 'primevue'
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
@@ -25,7 +25,7 @@ device-orientation-permission-ui="enabled: false">
     In this code, we will be running using
     <a href="https://hiukim.github.io/mind-ar-js-doc/">Mind AR</a> to do our simple AR exercise. In
     the enclosed example, this is a very simple example where we use the example given by the
-    library just as a quick explainer and example
+    library just as a quick explainer and example. 
   </p>
   <p>
     The example is purely in HTML and uses A-FRAME to display the "augmented" part of the
@@ -44,7 +44,11 @@ device-orientation-permission-ui="enabled: false">
   </p>
   <div id="code-editor">
     <h2>Code snippet</h2>
-    <AREditorTemplate :placeholder="code" :iframeId="quickExample" />
+    <AREditorTemplate :placeholder="code" :iframeId="`quickExample`" />
+  </div>
+  <div class="image-box">
+      <Image src="/src/assets/AR/high_contrast.png" alt="High Contrast Image" width="50%" />
+      <p>Image to scan</p>
   </div>
   <h2>Explanation</h2>
   <p>
@@ -63,5 +67,12 @@ device-orientation-permission-ui="enabled: false">
 #code-editor {
   display: flex;
   flex-direction: column;
+}
+.image-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>

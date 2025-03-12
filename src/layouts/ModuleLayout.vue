@@ -19,7 +19,7 @@
 }
 .module-content {
   margin-left: 1rem;
-  margin-right: 1rem;
+  margin-right: 6rem;
 }
 .scroll-panel {
   position: sticky;

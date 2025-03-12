@@ -3,7 +3,7 @@ import ARExerciseStartPage from '@/views/Exercises/AugmentedReality/ARExerciseSt
 import ARQuickExample from '@/views/Exercises/AugmentedReality/ARQuickExample.vue'
 import FullARExample from '@/views/Exercises/AugmentedReality/FullARExample.vue'
 import CVExerciseStartPage from '@/views/Exercises/ComputerVision/CVExerciseStartPage.vue'
-import CVQuickExample from '@/views/Exercises/ComputerVision/CVQuickExample.vue'
+import CVQuickExample from '@/views/Exercises/ComputerVision/CVSobelExercise.vue'
 
 export default [
   {
