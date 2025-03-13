@@ -68,11 +68,11 @@ import { Image } from 'primevue'
     </p>
     <div class="container">
       <div class="image-box">
-        <Image src="/src/assets/CV/ntu_coat_of_arms.png" alt="Original" width="50%" />
+        <Image :src="NTU_COAT_OF_ARMS" alt="Original" width="50%" />
         <p>Original Image</p>
       </div>
       <div class="image-box">
-        <Image src="/src/assets/CV/ntu_coat_grayscale.png" alt="Grayscale" width="50%" />
+        <Image :src="NTU_COAT_GRAYSCALE" alt="Grayscale" width="50%" />
         <p>Grayscale Image</p>
       </div>
     </div>
@@ -248,7 +248,7 @@ import { Image } from 'primevue'
     <div class="container">
       <div class="image-box">
         <Image
-          src="/src/assets/CV/ntu_coat_of_arms.png"
+          :src="NTU_COAT_OF_ARMS"
           alt="Edge Detection Example"
           width="50%"
           preview
@@ -257,8 +257,8 @@ import { Image } from 'primevue'
       </div>
       <div class="image-box">
         <Image
-          src="/src/assets/CV/ntu_coat_sobel.png"
-          alt="Edge Detection Example"
+          :src="NTU_COAT_SOBEL"
+          alt="Sobel Filter"
           width="50%"
           preview
         />
