@@ -1,5 +1,6 @@
 <script setup>
 import { Image } from 'primevue'
+import { NTU_COAT_OF_ARMS, NTU_COAT_GRAYSCALE, NTU_COAT_SOBEL } from '@/assets/files'
 </script>
 
 <template>
@@ -247,21 +248,11 @@ import { Image } from 'primevue'
     </p>
     <div class="container">
       <div class="image-box">
-        <Image
-          :src="NTU_COAT_OF_ARMS"
-          alt="Edge Detection Example"
-          width="50%"
-          preview
-        />
+        <Image :src="NTU_COAT_OF_ARMS" alt="Edge Detection Example" width="50%" preview />
         <p>Original</p>
       </div>
       <div class="image-box">
-        <Image
-          :src="NTU_COAT_SOBEL"
-          alt="Sobel Filter"
-          width="50%"
-          preview
-        />
+        <Image :src="NTU_COAT_SOBEL" alt="Sobel Filter" width="50%" preview />
         <p>Sobel Filter</p>
       </div>
     </div>

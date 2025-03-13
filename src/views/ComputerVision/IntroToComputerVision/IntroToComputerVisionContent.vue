@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { TILES } from '@/assets/files';
-
+import { TILES } from '@/assets/files'
 </script>
 
 <template>
