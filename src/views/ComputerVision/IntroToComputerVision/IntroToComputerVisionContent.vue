@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { TILES } from '@/assets/files';
+
+</script>
+
 <template>
   <h1 id="Introduction">Introduction</h1>
   <p>
@@ -22,7 +27,7 @@
     this 4 by 4 grid below:
   </p>
   <div style="text-align: center">
-    <Image src="/src/assets/CV/tiles.png" alt="4x4 Grid" width="30%" />
+    <Image :src="TILES" alt="4x4 Grid" width="30%" />
     <p>4 by 4 grid</p>
   </div>
   <p>

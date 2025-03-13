@@ -1,6 +1,7 @@
 <script setup>
 import { Image } from 'primevue'
 import AREditorTemplate from './template/AREditorTemplate.vue'
+import { HIGH_CONTRAST_FEATURE_MAP, LOW_CONTRAST_FEATURE_MAP, LOW_CONTRAST, HIGH_CONTRAST, NTU_LOGO_MIND} from '@/assets/files'
 
 const firstStep = `
 <!-- This is the first scene we will create, just a plane and a box on top of it -->
@@ -12,7 +13,7 @@ const firstStep = `
 `
 
 const firstARScene = `
-<a-scene mindar-image="imageTargetSrc: /src/assets/AR/ntu_logo.mind;" 
+<a-scene mindar-image="imageTargetSrc: ${NTU_LOGO_MIND};" 
 color-space="sRGB" 
 renderer="colorManagement: true, physicallyCorrectLights" 
 vr-mode-ui="enabled: false" 
@@ -54,11 +55,11 @@ device-orientation-permission-ui="enabled: false">
   </p>
   <div class="container">
     <div class="image-box">
-      <Image src="/src/assets/AR/low_contrast.png" alt="Low Contrast Image" width="50%" preview />
+      <Image :src="LOW_CONTRAST" alt="Low Contrast Image" width="50%" preview />
       <p>Low Contrast Image</p>
     </div>
     <div class="image-box">
-      <Image src="/src/assets/AR/high_contrast.png" alt="High Contrast Image" width="50%" preview />
+      <Image :src="HIGH_CONTRAST" alt="High Contrast Image" width="50%" preview />
       <p>High Contrast Image</p>
     </div>
   </div>
@@ -73,7 +74,7 @@ device-orientation-permission-ui="enabled: false">
   <div class="container">
     <div class="image-box">
       <Image
-        src="/src/assets/AR/low_contrast_feature_map.png"
+        :src="LOW_CONTRAST_FEATURE_MAP"
         alt="Low Contrast Feature Map"
         width="50%"
         preview
@@ -82,7 +83,7 @@ device-orientation-permission-ui="enabled: false">
     </div>
     <div class="image-box">
       <Image
-        src="/src/assets/AR/high_contrast_feature_map.png"
+        :src="HIGH_CONTRAST_FEATURE_MAP"
         alt="High Contrast Featire Map"
         width="50%"
         preview

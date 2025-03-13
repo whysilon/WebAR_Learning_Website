@@ -3,9 +3,10 @@ import AREditorTemplate from '@/views/Exercises/AugmentedReality/template/AREdit
 import { Button, Image } from 'primevue'
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import { NTU_LOGO_MIND, HIGH_CONTRAST } from '@/assets/files'
 
 const code = ref(`
-<a-scene mindar-image="imageTargetSrc: /src/assets/AR/ntu_logo.mind;" 
+<a-scene mindar-image="imageTargetSrc: ${NTU_LOGO_MIND};" 
 color-space="sRGB" 
 renderer="colorManagement: true, physicallyCorrectLights" 
 vr-mode-ui="enabled: false" 
@@ -47,7 +48,7 @@ device-orientation-permission-ui="enabled: false">
     <AREditorTemplate :placeholder="code" :iframeId="`quickExample`" />
   </div>
   <div class="image-box">
-    <Image src="/src/assets/AR/high_contrast.png" alt="High Contrast Image" width="50%" />
+    <Image :src="HIGH_CONTRAST" alt="High Contrast Image" width="50%" />
     <p>Image to scan</p>
   </div>
   <h2>Explanation</h2>

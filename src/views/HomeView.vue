@@ -6,7 +6,9 @@ import { Card, Divider, Image } from 'primevue'
   <div class="container">
     <div class="content">
       <h1>Augmented Reality</h1>
-      <p>lorem ipsum lmao</p>
+      <p>This is a website to learn AR and its concepts. You can navigate using the top bar to see the respective topics or go straight into exercises which will 
+        teach you how to quickly start coding in AR.
+      </p>
     </div>
     <Card class="content">
       <template #content>

@@ -1,4 +1,5 @@
 <script setup>
+import { HIRO_MARKER_ARJS, POKEMON_GAMEPLAY } from '@/assets/files';
 import { Card, Image } from 'primevue'
 </script>
 
@@ -11,7 +12,7 @@ import { Card, Image } from 'primevue'
     and the digital. But how does it really work?
   </p>
   <div style="text-align: center">
-    <Image src="/src/assets/AR/pokemon_gameplay.jpg" alt="Pokemon Go" width="50%" />
+    <Image :src="POKEMON_GAMEPLAY" alt="Pokemon Go" width="50%" />
     <p>Gameplay of Pokemon Go</p>
   </div>
   <p></p>
@@ -67,7 +68,7 @@ import { Card, Image } from 'primevue'
     marker, which looks like the image below.
   </p>
   <div style="text-align: center">
-    <Image src="/src/assets/AR/Hiro_marker_ARjs.png" alt="Hiro Marker" />
+    <Image :src="HIRO_MARKER_ARJS" alt="Hiro Marker" />
     <p>Hiro Marker</p>
   </div>
   <p>
