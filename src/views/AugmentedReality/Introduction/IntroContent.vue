@@ -1,5 +1,5 @@
 <script setup>
-import { HIRO_MARKER_ARJS, POKEMON_GAMEPLAY } from '@/assets/files';
+import { HIRO_MARKER_ARJS, POKEMON_GAMEPLAY } from '@/assets/files'
 import { Card, Image } from 'primevue'
 </script>
 

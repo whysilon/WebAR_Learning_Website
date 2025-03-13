@@ -1,7 +1,13 @@
 <script setup>
 import { Image } from 'primevue'
 import AREditorTemplate from './template/AREditorTemplate.vue'
-import { HIGH_CONTRAST_FEATURE_MAP, LOW_CONTRAST_FEATURE_MAP, LOW_CONTRAST, HIGH_CONTRAST, NTU_LOGO_MIND} from '@/assets/files'
+import {
+  HIGH_CONTRAST_FEATURE_MAP,
+  LOW_CONTRAST_FEATURE_MAP,
+  LOW_CONTRAST,
+  HIGH_CONTRAST,
+  NTU_LOGO_MIND,
+} from '@/assets/files'
 
 const firstStep = `
 <!-- This is the first scene we will create, just a plane and a box on top of it -->
@@ -73,21 +79,11 @@ device-orientation-permission-ui="enabled: false">
   </p>
   <div class="container">
     <div class="image-box">
-      <Image
-        :src="LOW_CONTRAST_FEATURE_MAP"
-        alt="Low Contrast Feature Map"
-        width="50%"
-        preview
-      />
+      <Image :src="LOW_CONTRAST_FEATURE_MAP" alt="Low Contrast Feature Map" width="50%" preview />
       <p>Low Contrast Feature Map</p>
     </div>
     <div class="image-box">
-      <Image
-        :src="HIGH_CONTRAST_FEATURE_MAP"
-        alt="High Contrast Featire Map"
-        width="50%"
-        preview
-      />
+      <Image :src="HIGH_CONTRAST_FEATURE_MAP" alt="High Contrast Featire Map" width="50%" preview />
       <p>High Contrast Feature Map</p>
     </div>
   </div>
