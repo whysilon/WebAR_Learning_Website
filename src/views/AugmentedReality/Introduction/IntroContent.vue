@@ -59,7 +59,8 @@ import { Card, Image } from 'primevue'
     In 1992, Louis B. Rosenberg created the Virtual Fixtures system. The device was used for
     training the US Air Force. The system overlayed virtual information on to the user's perspective
     to aid the user in performing the task at hand. This increased the performance of the user as
-    compared to the traditional methods of training.
+    compared to the traditional methods of training. More on the Virtual Fixtures system can be seen in
+    <a href="https://www.youtube.com/watch?v=5wKY4u1-Qoc">this video.</a>
   </p>
   <p>
     In 1999, ARToolKit was created by Hirokazu Kato and released to the public in 2001. The
