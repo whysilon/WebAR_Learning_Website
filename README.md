@@ -1,14 +1,6 @@
-# UITesting
+# AR Learning Website
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+This website is created to facilitate the learning of Augmented Reality and its associated concepts in Computer Vision. It is developed for NTU's Final Year Project.
 
 ## Project Setup
 
