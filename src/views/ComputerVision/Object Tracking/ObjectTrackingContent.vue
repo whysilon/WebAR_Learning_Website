@@ -259,11 +259,10 @@ import { NTU_COAT_OF_ARMS, NTU_COAT_GRAYSCALE, NTU_COAT_SOBEL } from '@/assets/f
 
     <h1 id="Steps-of-Object-Tracking">Steps of Object Tracking</h1>
     <p>
-      So far, what we have discussed is in the context of a single frame of and image. In order to
-      track an object, we would need to consider the dynamic changes in the environment. As
-      discussed previously, we would need
+      So far, what we have discussed is in the context of a single frame or an image. In order to
+      track an object, we would need to consider the dynamic changes in the environment. 
     </p>
-    <p>In a typical object tracking scenario,</p>
+    <p>Let us take an </p>
   </div>
 </template>
 
