@@ -1,10 +1,9 @@
 <template>
-  <SideMenu :items="items"/>
+  <SideMenu :items="items" />
 </template>
 
 <script setup>
-import SideMenu from '@/components/SideMenu.vue';
-
+import SideMenu from '@/components/SideMenu.vue'
 
 const items = [
   {
@@ -14,14 +13,6 @@ const items = [
   {
     label: 'Important Terms',
     route: '#Important-Terms',
-  },
-  {
-    label: 'Object Recognition',
-    route: '#Object-Recognition',
-  },
-  {
-    label: 'Steps of Object Tracking',
-    route: '#Steps-of-Object-Tracking',
   },
 ]
 </script>
