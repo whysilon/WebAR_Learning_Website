@@ -7,13 +7,13 @@ import { NTU_COAT_OF_ARMS, NTU_COAT_GRAYSCALE, NTU_COAT_SOBEL } from '@/assets/f
   <div>
     <h1 id="Introduction">Introduction</h1>
     <p>
-      As discussed in the previous section on feature detection, 
-      we want to identify the most interesting parts of an image — its features. 
-      In many drawings or photographs — like those of faces, houses, or mountains — 
-      the defining parts of the image are often the lines and boundaries where colors or textures change. 
-      These boundaries are known as edges, and detecting them is a crucial first step in image analysis. 
-      Edge detection algorithms help the computer find the outlines of objects, making it easier to later identify 
-      and focus on specific features in the image.
+      As discussed in the previous section on feature detection, we want to identify the most
+      interesting parts of an image — its features. In many drawings or photographs — like those of
+      faces, houses, or mountains — the defining parts of the image are often the lines and
+      boundaries where colors or textures change. These boundaries are known as edges, and detecting
+      them is a crucial first step in image analysis. Edge detection algorithms help the computer
+      find the outlines of objects, making it easier to later identify and focus on specific
+      features in the image.
     </p>
     <h1 id="Edge-Detection">Edge Detection</h1>
     <p>
@@ -205,7 +205,7 @@ import { NTU_COAT_OF_ARMS, NTU_COAT_GRAYSCALE, NTU_COAT_SOBEL } from '@/assets/f
       of pixels — it is about finding patterns and structure. One important technique is edge
       detection, like the Sobel Operator, which highlights where brightness changes sharply. These
       edges often mark the boundaries of objects, making it easier for the computer to focus on what
-      matters. 
+      matters.
     </p>
   </div>
 </template>

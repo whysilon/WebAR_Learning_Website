@@ -10,5 +10,13 @@ const items = [
     label: 'Introduction',
     route: '#Introduction',
   },
+  {
+    label: 'Why Feature Detection?',
+    route: '#Why-Feature-Detection',
+  },
+  {
+    label: 'Feature Detection',
+    route: '#Feature-Detection',
+  },
 ]
 </script>

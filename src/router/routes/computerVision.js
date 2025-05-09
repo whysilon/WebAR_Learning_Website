@@ -31,15 +31,15 @@ export default [
         components: {
           default: FeatureDetectionMenu,
           module: FeatureDetectionContent,
-        }
+        },
       },
       {
         path: 'object-tracking',
         components: {
           default: ObjectTrackingMenu,
           module: ObjectTrackingContent,
-        }
-      }
+        },
+      },
     ],
   },
 ]

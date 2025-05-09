@@ -16,15 +16,16 @@ import { TILES } from '@/assets/files'
   </p>
   <h1 id="How-Computer-Vision">How does a computer see?</h1>
   <p>
-    For humans, we perceive the environment by using our eyes. This works through the process of
-    light hitting surfaces and reflecting the light into our eyes. Our eyes then turn this light
-    into electrical signals which will turn the signals into images in our brain. For computers,
-    they do not have our eyes nor our processing system, but it works in a similar way. To
-    substitute the eyes, computers use cameras to capture the light to turn it to electrical
-    signals. The computer then processes the signals to create a format in which it can understand
-    and interpret the environment around them. To understand it better, let us assume that we have
-    this 4 by 4 grid below:
+    Humans perceive the environment using our eyes. Light reflects off surfaces and enters our eyes,
+    where it is converted into electrical signals. These signals are then processed by our brain to
+    form images, allowing us to interpret what we see.
   </p>
+  <p>
+    Computers, while lacking biological eyes and brains, function in a similar way. Instead of eyes,
+    they use cameras to capture light from the environment. This light is also converted into
+    electrical signals, which the computer then processes into a digital format it can understand.
+  </p>
+  <p>To illustrate how a computer interprets visual data, let's consider a simple 4 by 4 grid:</p>
   <div style="text-align: center">
     <Image :src="TILES" alt="4x4 Grid" width="30%" />
     <p>4 by 4 grid</p>
@@ -38,15 +39,14 @@ import { TILES } from '@/assets/files'
   </p>
   <h1 id="Difficulties-in-AR">Difficulties in Augmented Reality</h1>
   <p>
-    Augmented Reality requires a real-time interaction with the environment. This means that the AR
-    requires video processing rather than image processing. In image processing, it is simpler as in
-    our previous example, we just need to perform our image processing on this one image. However, a
-    video can be seen as a series of frames of images, which means we need to perform our image
-    processing on each frame. This is a difficult task as we are not only limited by the amount of
-    time we have to process but we would need to understand the environment within each frame and
-    how it changes over time. Hence, the question is, how do we track where the virtual objects are
-    displayed in the display screen and how do we make sure that these virtual objects are displayed
-    with the correct orientation? This is why computer vision concepts such as object tracking and
-    localisation are important.
+    Augmented Reality (AR) needs to react to the real world in real time. That means instead of just
+    looking at one image, like a photo, AR has to work with video — which is really just lots of
+    images (called frames) shown one after another really fast. In a single image, we can easily
+    find objects and edges. But with video, the computer has to do that for every frame — and do it
+    fast enough to keep up as things move or change. That’s much harder. So the big question
+    becomes: how do we keep track of where the virtual objects should go on the screen? And how do
+    we make sure they stay in the right place and at the right angle, even when the camera moves or
+    the real world shifts? That’s why we need tools from computer vision — especially object
+    tracking and localisation — to make AR work smoothly.
   </p>
 </template>
